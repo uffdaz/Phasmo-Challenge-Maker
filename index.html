@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Phasmo Challenge Generator</title>
+    <link rel="stylesheet" href="include/bootstrap.min.css">
+    <link rel="stylesheet" href="include/style.css">
+    <script src="include/require.js"></script>
+    <script src="include/jquery-3.5.1.js"></script>
+</head>
+
+<body onload="init()" class='bg-grad'>
+    <div class="container-fluid">
+        <p class='display-1 text-center title text-white pb-5 pt-3'>Phasmo Challenge Generator</p>
+        <div class='row pb-3'>
+            <p class='h3 paragraph text-white col-sm-4 text-right'>Bone Found:</p>
+            <p class='pl-3 h3 paragraph text-white' id="bone-item"></p>
+        </div>
+        <div class='row pb-5'>
+            <p class='h3 paragraph text-white col-sm-4 text-right'>Oujia Board Found:</p>
+            <p class='pl-3 h3 paragraph text-white' id="oujia-item"></p>
+        </div>
+        <div class='row pb-3'>
+            <p class='h3 paragraph text-white col-sm-4 text-right'>1st Evidence:</p>
+            <p class='pl-3 h3 paragraph text-white' id="first-ev-item"></p>
+        </div>
+        <div class='row pb-3'>
+            <p class='h3 paragraph text-white col-sm-4 text-right'>2nd Evidence:</p>
+            <p class='pl-3 h3 paragraph text-white' id="second-ev-item"></p>
+        </div>
+        <div class='row pb-5'>
+            <p class='h3 paragraph text-white col-sm-4 text-right'>3rd Evidence:</p>
+            <p class='pl-3 h3 paragraph text-white' id="third-ev-item"></p>
+        </div>
+        <div class='row pb-3'>
+            <p class='h3 paragraph text-white col-sm-4 text-right'>2nd Objective:</p>
+            <p class='pl-3 h3 paragraph text-white' id="second-ob-item"></p>
+        </div>
+        <div class='row pb-3'>
+            <p class='h3 paragraph text-white col-sm-4 text-right'>3rd Objective:</p>
+            <p class='pl-3 h3 paragraph text-white' id="third-ob-item"></p>
+        </div>
+        <div class='row pb-5'>
+            <p class='h3 paragraph text-white col-sm-4 text-right'>4th Objective:</p>
+            <p class='pl-3 h3 paragraph text-white' id="fourth-ob-item"></p>
+        </div>
+        <div class='text-center pb-5'>        
+            <button class='btn btn-primary btn-light title' onclick="generate()">Generate</button>
+        </div>
+    </div>
+</body>
+
+<script src="scripts/index.js"></script>

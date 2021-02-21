@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "October Crow";
+    src: url("October\ Crow.ttf");
+    src: 
+	url('October\ Crow.ttf') 
+	format('truetype');
+}
+
+html {
+    height: 100%;
+}
+
+.bg-grad {
+    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(38,38,38,1));
+    min-height: 100%;
+}
+
+.title {
+    font-family: 'October Crow';
+}
+
+.paragraph {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
