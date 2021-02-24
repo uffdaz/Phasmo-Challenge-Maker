@@ -21,7 +21,7 @@
         </div>
         <div class='row pb-3'>
             <p class='h3 paragraph text-white col-sm-4 text-right'>1st Evidence:</p>
-            <p class='pl-3 h3 paragraph text-white' id="first-ev-item"></p>
+            <p class='pl-3 h3 paragraph text-white col-sm-2' id="first-ev-item"></p>
         </div>
         <div class='row pb-3'>
             <p class='h3 paragraph text-white col-sm-4 text-right'>2nd Evidence:</p>
@@ -43,9 +43,16 @@
             <p class='h3 paragraph text-white col-sm-4 text-right'>4th Objective:</p>
             <p class='pl-3 h3 paragraph text-white' id="fourth-ob-item"></p>
         </div>
-        <div class='text-center pb-5'>        
-            <button class='btn btn-primary btn-light title' onclick="generate()">Generate</button>
+        <div class='row pb-5'>
+            <p class='h5 paragraph text-white col-sm-4 text-right'>Free Items:</p>
+            <p class='pl-3 h5 paragraph text-white' id='free-items'></p>
         </div>
+        <div class='row justify-content-center'>
+            <button class='btn btn-primary btn-light col-sm-1 btn-block title mr-5' onclick="generate()">Generate</button>
+            <button class='btn btn-primary btn-light col-sm-1 title' onclick="copy_text()">Copy</button>
+        </div>
+        
+        <textarea id="copy-field"></textarea>
     </div>
 </body>
 

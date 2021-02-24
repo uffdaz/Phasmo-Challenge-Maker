@@ -19,10 +19,27 @@ function generate() {
     oujia.innerHTML = getItem(helpful_priority);
     first_ev.innerHTML = getItem(high_priority);
     second_ev.innerHTML = getItem(high_priority);
-    third_ev.innerHTML = getItem(high_priority);
-    second_ob.innerHTML = getItem(mid_priority);
-    third_ob.innerHTML = getItem(high_priority);
+    third_ev.innerHTML = getItem(helpful_priority);
+    second_ob.innerHTML = getItem(high_priority);
+    third_ob.innerHTML = getItem(mid_priority);
     fourth_ob.innerHTML = getItem(mid_priority);
+    var free_list = [];
+    for (let [key, value] of high_priority) {
+        if (high_priority[key] == 0) {
+            free_list.push(key, ", ");
+        }
+    }
+    for (let [key, value] of mid_priority) {
+        if (mid_priority[key] == 0) {
+            free_list.push(key, ", ");
+        }
+    }
+    for (let [key, value] of helpful_priority) {
+        if (helpful_priority[key] == 0) {
+            free_list.push(key);
+        }
+    }
+    document.getElementById('free-items').innerHTML = free_list.join("");
 }
 
 function getItem(list) {
@@ -47,6 +64,43 @@ function clear_items() {
     for (let [key, value] of helpful_priority) {
         helpful_priority[key] = 0;
     }
+}
+
+function copy_text() {
+    var item_list = [];
+    item_list.push(
+        "Bone Found: ",
+        document.getElementById("bone-item").textContent,
+        "\n",
+        "Ouija Found: ",
+        document.getElementById("oujia-item").textContent,
+        "\n",
+        "1st Evidence: ",
+        document.getElementById("first-ev-item").textContent,
+        "\n\n",
+        "2nd Evidence: ",
+        document.getElementById("second-ev-item").textContent,
+        "\n",
+        "3rd Evidence: ",
+        document.getElementById("third-ev-item").textContent,
+        "\n\n",
+        "2nd Objective: ",
+        document.getElementById("second-ob-item").textContent,
+        "\n",
+        "3rd Objective: ",
+        document.getElementById("third-ob-item").textContent,
+        "\n",
+        "4th Objective: ",
+        document.getElementById("fourth-ob-item").textContent,
+        "\n\n",
+        "Free Items: ",
+        document.getElementById("free-items").textContent,
+    );
+    var text_area = document.getElementById("copy-field");
+    text_area.innerHTML = item_list.join("");
+    text_area.select();
+    text_area.setSelectionRange(0,9999);
+    document.execCommand("copy");
 }
 
 function init() {
