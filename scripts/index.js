@@ -26,12 +26,12 @@ function generate() {
     var free_list = [];
     for (let [key, value] of high_priority) {
         if (high_priority[key] == 0) {
-            free_list.push(key, ", ");
+            free_list.push(key);
         }
     }
     for (let [key, value] of mid_priority) {
         if (mid_priority[key] == 0) {
-            free_list.push(key, ", ");
+            free_list.push(key);
         }
     }
     for (let [key, value] of helpful_priority) {
@@ -39,7 +39,7 @@ function generate() {
             free_list.push(key);
         }
     }
-    document.getElementById('free-items').innerHTML = free_list.join("");
+    document.getElementById('free-items').innerText = free_list.join("\n\n");
 }
 
 function getItem(list) {
@@ -111,7 +111,7 @@ function init() {
     high_priority.set("Photo Camera", 0);
     high_priority.set("Strong Flashlight", 0);
     mid_priority.set("Lighter", 0);
-    mid_priority.set("Head Mounted Camera", 0);
+    mid_priority.set("Head Camera", 0);
     mid_priority.set("Crucifix", 0);
     mid_priority.set("UV Flashlight", 0);
     mid_priority.set("Motion Sensor", 0);
