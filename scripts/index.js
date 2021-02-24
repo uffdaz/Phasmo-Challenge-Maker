@@ -26,12 +26,12 @@ function generate() {
     var free_list = [];
     for (let [key, value] of high_priority) {
         if (high_priority[key] == 0) {
-            free_list.push(key);
+            free_list.push(key, ",\ \n\n");
         }
     }
     for (let [key, value] of mid_priority) {
         if (mid_priority[key] == 0) {
-            free_list.push(key);
+            free_list.push(key, ",\ \n\n");
         }
     }
     for (let [key, value] of helpful_priority) {
@@ -39,7 +39,7 @@ function generate() {
             free_list.push(key);
         }
     }
-    document.getElementById('free-items').innerText = free_list.join("\n\n");
+    document.getElementById('free-items').innerText = free_list.join("");
 }
 
 function getItem(list) {
